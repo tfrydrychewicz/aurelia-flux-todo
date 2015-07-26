@@ -1,0 +1,19 @@
+<template>
+	<require from="itemTags/itemTags"></require>	
+	
+	<div class="panel panel-default ${item.completed ? 'item-completed' : 'item-uncompleted'}" repeat.for="[id, item] of listStore.items">
+		<div class="panel-body">
+			<div class="row">
+				<div class="col-xs-1 item-mark" click.trigger="$parent.toggleCompleted(item)">
+					<i class="fa fa-check fa-2x"></i>
+				</div>
+				<div class="col-xs-11 item-text">
+					${item.text}
+				</div>
+			</div>
+		</div>
+		<div class="panel-footer">						   			 
+			<todo-item-tags item-id.bind="item.id"></todo-item-tags>
+		</div>
+	</div>
+</template>

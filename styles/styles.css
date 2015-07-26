@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding-top: 60px;
+}
+
+.splash {
+    text-align: center;
+    margin: 10% 0 0 0;
+    box-sizing: border-box;
+}
+
+.navbar-nav li.loader {
+    margin: 12px 24px 0 6px;
+}
+
+.item-text {
+  font-size: 1.5em;
+}
+
+.item-mark {
+  cursor: pointer;
+}
+
+.item-completed .item-mark {
+  color: green;
+}
+
+.item-uncompleted .item-mark {
+  color: lightgray;
+}
+
+.item-completed .item-text {
+  color: grey;
+  text-decoration: line-through;  
+}
+
+.item-uncompleted .item-text {
+  color: black;
+  text-decoration: none;
+}

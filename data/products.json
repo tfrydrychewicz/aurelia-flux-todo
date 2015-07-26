@@ -1,0 +1,56 @@
+[
+	{
+		"products": [
+			{
+				"id": 1,				
+				"name": "Apple"
+			},
+			{
+				"id": 2,				
+				"name": "Pear"
+			},
+			{
+				"id": 3,				
+				"name": "Banana"
+			},
+			{
+				"id": 4,				
+				"name": "Orange"
+			},
+			{
+				"id": 5,				
+				"name": "Raspberry"
+			},
+			{
+				"id": 6,				
+				"name": "Watermelon"
+			}
+		],
+		"storehouse": [
+			{
+				"productId": 1,
+				"quantity": 10
+			},
+			{
+				"productId": 2,
+				"quantity": 10
+			},
+			{
+				"productId": 3,
+				"quantity": 10
+			},
+			{
+				"productId": 4,
+				"quantity": 10
+			},
+			{
+				"productId": 5,
+				"quantity": 10
+			},
+			{
+				"productId": 6,
+				"quantity": 10
+			}
+		]
+	}
+]

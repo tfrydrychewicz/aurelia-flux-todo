@@ -1,0 +1,38 @@
+<template>
+	<require from="list/list"></require>
+	<require from="stats/stats"></require>			
+	<require from="tagsCloud/tagsCloud"></require>
+	
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<h1>ToDo List</h1>
+		</div>
+	</div>
+	<hr />
+	<div class="row">
+		<div class="col-md-10">
+			<input type="text" class="form-control input-lg" value.bind="text" placeholder="What would you like to do?">
+		</div>
+		<div class="col-md-2">
+			<button class="btn btn-lg btn-success btn-block" click.delegate="addItem()">Add</button>
+		</div>
+	</div>
+	<hr />
+	<div class="row">
+		<div class="col-md-8">
+			<todo-list></todo-list>
+		</div>
+		<div class="col-md-4">
+			<div class="row">
+				<div class="col-xs-12">
+					<todo-stats></todo-stats>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<todo-tags-cloud></todo-tags-cloud>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
