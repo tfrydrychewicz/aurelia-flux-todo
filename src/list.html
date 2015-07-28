@@ -1,8 +1,8 @@
 <template>
-	<require from="list/list"></require>
-	<require from="stats/stats"></require>			
-	<require from="tagsCloud/tagsCloud"></require>
-	
+	<require from="todo-list/todo-list"></require>
+	<require from="todo-stats/todo-stats"></require>
+	<require from="todo-tags-cloud/todo-tags-cloud"></require>
+
 	<div class="row">
 		<div class="col-md-12 text-center">
 			<h1>ToDo List</h1>
@@ -11,10 +11,14 @@
 	<hr />
 	<div class="row">
 		<div class="col-md-10">
-			<input type="text" class="form-control input-lg" value.bind="text" placeholder="What would you like to do?">
+			<input type="text"
+				   class="form-control input-lg"
+				   ref="text"
+				   placeholder="What would you like to do?">
 		</div>
 		<div class="col-md-2">
-			<button class="btn btn-lg btn-success btn-block" click.delegate="addItem()">Add</button>
+			<button class="btn btn-lg btn-success btn-block"
+				    click.delegate="addItem(text.value); text.value = ''">Add</button>
 		</div>
 	</div>
 	<hr />

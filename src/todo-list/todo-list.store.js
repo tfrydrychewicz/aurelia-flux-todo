@@ -1,13 +1,17 @@
-import {handle, Dispatcher} from 'aurelia-flux';
 import {inject} from 'aurelia-framework';
+import {handle, Dispatcher} from 'aurelia-flux';
 
 @inject(Dispatcher)
-export class ListStore {
+export class TodoListStore {
 	
 	_items = new Map();
 	
 	constructor(dispatcher) {
 		this.dispatcher = dispatcher;
+	}
+	
+	get items() {
+		return this._items;
 	}
 	
 	@handle('list.addItem')
@@ -29,12 +33,7 @@ export class ListStore {
 		if(this._items.has(id)) {
 			this._items.get(id).completed = false;	
 		}
-	}
-	
-	get items() {
-		return this._items;
-	}
-	
+	}			
 }
 
 export class ListItem {

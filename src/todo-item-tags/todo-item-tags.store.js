@@ -1,12 +1,16 @@
-import {Dispatcher, handle} from 'aurelia-flux';
 import {inject} from 'aurelia-framework';
+import {Dispatcher, handle} from 'aurelia-flux';
 
 @inject(Dispatcher)
-export class ItemTagsStore {
-	tags = new Map();
-	
+export class TodoItemTagsStore {
+	_tags = new Map();
+		
 	constructor(dispatcher) {
 		this.dispatcher = dispatcher;
+	}
+	
+	get tags() {
+		return this._tags;
 	}
 	
 	@handle('list.itemAdded')

@@ -6,7 +6,13 @@ export class App {
   configureRouter(config, router){
     config.title = 'ToDo List';
     config.map([
-      { route: ['','welcome'], name: 'welcome',      moduleId: './welcome',       nav: true,  title:'Welcome' }      
+      { 
+        route: [''], 
+        name: 'list', 
+        moduleId: './list', 
+        nav: true, 
+        title:'List' 
+      }      
     ]);
 
     this.router = router;

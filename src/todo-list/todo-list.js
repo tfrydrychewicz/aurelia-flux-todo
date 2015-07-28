@@ -1,13 +1,13 @@
 import {customElement, inject} from 'aurelia-framework';
-import {ListStore} from './list.store';
 import {Dispatcher} from 'aurelia-flux';
+import {TodoListStore} from './todo-list.store';
 
 @customElement("todo-list")
-@inject(Dispatcher, ListStore)
-export class ToDoList {
-	constructor(dispatcher, listStore) {
+@inject(Dispatcher, TodoListStore)
+export class TodoList {
+	constructor(dispatcher, todoListStore) {
 		this.dispatcher = dispatcher;
-		this.listStore = listStore;
+		this.todoListStore = todoListStore;
 	}	
 	
 	toggleCompleted(item) {

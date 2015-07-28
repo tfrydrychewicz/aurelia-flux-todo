@@ -1,6 +1,6 @@
 import {handle} from 'aurelia-flux';
 
-export class TagsCloudStore {
+export class TodoTagsCloudStore {
 	tags = new Map();
 	
 	@handle('tags.tagAdded')

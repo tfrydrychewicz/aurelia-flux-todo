@@ -1,17 +1,17 @@
 import {handle, waitFor} from 'aurelia-flux';
-import {ListStore} from 'list/list.store';
+import {TodoListStore} from 'todo-list/todo-list.store';
 
-export class StatsStore {
+export class TodoStatsStore {
 	stats = {
-		items: 0,
-		completed: 0,
+		items:       0,
+		completed:   0,
 		uncompleted: 0,
-		words: 0,
-		characters: 0
+		words:       0,
+		characters:  0
 	};
 	
 	@handle('list.addItem')
-	@waitFor(ListStore)
+	@waitFor(TodoListStore)
 	newItem(action, text) {
 		this.stats.items++;
 		this.stats.uncompleted++;
@@ -20,14 +20,14 @@ export class StatsStore {
 	}
 	
 	@handle('list.completeItem')
-	@waitFor(ListStore) 
+	@waitFor(TodoListStore) 
 	itemCompleted(action, id) {
 		this.stats.completed++;
 		this.stats.uncompleted--;
 	}
 	
 	@handle('list.undoCompleteItem')
-	@waitFor(ListStore)
+	@waitFor(TodoListStore)
 	itemUncompleted(action, id) {
 		this.stats.completed--;
 		this.stats.uncompleted++;
