@@ -183,6 +183,13 @@ System.config({
       "bluebird": "npm:bluebird@2.9.34",
       "core-js": "npm:core-js@0.9.18"
     },
+    "github:tfrydrychewicz/aurelia-flux@0.1.3": {
+      "aurelia-binding": "github:aurelia/binding@0.8.2",
+      "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.9.0",
+      "aurelia-framework": "github:aurelia/framework@0.13.3",
+      "bluebird": "npm:bluebird@2.9.34",
+      "core-js": "npm:core-js@0.9.18"
+    },
     "github:twbs/bootstrap@3.3.4": {
       "jquery": "github:components/jquery@2.1.4"
     },
